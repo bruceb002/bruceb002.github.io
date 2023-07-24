@@ -1,0 +1,232 @@
+/* this css file will only style the homepage of our site */
+* {box-sizing: border-box;}
+
+body {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-image: -webkit-linear-gradient(top, rgb(101, 216, 133), rgb(143, 255, 223),rgb(60, 141, 255));
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.subsection#intro {
+	color: rgb(243, 253, 255);
+}
+
+h1 {
+	text-shadow: 2px 2px #91d7ff;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 40px;
+}
+
+h2 {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	font-family: cursive;
+	color: #f3f7ff;
+	text-shadow: -1px -1px 3px rgb(183, 65, 120);
+}
+
+.minor-section {
+	width: 55%;
+	height: 30%;
+	position: relative;
+	overflow: hidden;
+	align-content: center;
+}
+
+#navbar {
+	width: 100%;
+	height: 10vh;
+	display: grid;
+  	grid-template-columns: 33vw 33vw 33vw;
+  	margin: auto;
+	background-color: rgb(0, 0, 0);
+}
+
+#name {
+	display: block;
+	margin: 8px;
+	text-align: center;
+}
+
+#socials {
+	display: flex;
+	justify-content: right;
+	align-content: center;
+	margin: 15px;
+}
+
+#socials img {
+	max-height: 10%;
+	max-width: 5vh;
+	max-width: auto;
+}
+
+.social_link {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* For Automatic Slideshow
+From W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto */
+.mySlides {
+	z-index: 2;
+	display: none;
+}
+
+img {
+	display: flex;
+	justify-self: center;
+	margin: auto;
+	object-fit: contain;
+	height: 350px;
+	max-height: 100%;
+	max-width: inherit;
+	width: auto;
+	border-width: 2px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+	display: flex;
+  	justify-content: center;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	position: relative;
+	margin: auto;
+}
+
+/* Caption text */
+figcaption {
+	color: #ffffff;
+	font-size: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	position: relative;
+	width: 1%;
+	aspect-ratio: 1/1;
+	margin: 0 2px;
+	background-color: rgb(220, 249, 255);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #ffffff;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .7} 
+	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+}
+
+ /* W3School code ends Here */
+
+#content {
+	margin: 15px;
+	padding: 10px;
+	border: solid 3px #ffffffe4;
+	border-radius: 25px;
+	background-color:rgb(0, 0, 0);
+	background-image: url('../img/solar.png');
+  	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+/* Icons */
+.rounded {
+	content: "";
+	clear: both;
+	display: table;
+	padding-top: 20px;
+	margin: auto;
+	align-items: center;
+}
+
+.column {
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	border-radius: 50%;
+	float: left;
+	margin-left: 50px;
+	cursor: pointer;
+}
+
+.special_title {
+	padding-top: 10px;
+}
+
+hr {
+	margin-top: -8px;
+	margin-bottom: 15px;
+}
+
+.special_subsection, div .subsection {
+	background-color: rgb(153, 35, 208);
+	background-image: url("../img/stars.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px ridge;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+	width: 100%;
+	height: 5%;
+	padding: 5px;
+}
+
+#music_links {
+	text-align: center;
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+#myVideo {
+	z-index: 0;
+	position: absolute;
+	text-align: center;
+	margin: auto;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: 2px white solid;
+}
