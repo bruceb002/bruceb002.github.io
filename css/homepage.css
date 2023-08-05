@@ -33,6 +33,20 @@ h2 {
 	text-shadow: -1px -1px 3px rgb(164, 45, 100);
 }
 
+/* Control link colors when clicked + when sitee reloaded*/
+a {
+	color: rgb(89, 189, 255);
+	transition: color 0.2s ease-in-out;
+}
+  
+a:hover {
+	color: rgb(228, 174, 255);
+}
+
+a.clicked {
+	color: rgb(152, 73, 255);
+}
+
 /* navbar */
 #navbar {
 	width: 100vw;
