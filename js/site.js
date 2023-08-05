@@ -1,17 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
-
-// Constants/variables
 let slideIndex = 0;
 let i = 0;
-// Functions
 
-// Credits to W3School for entire code
-// This function increments/resets the count of the images and dots as nessecary
-//in order to transition between them
-
-//search: trigger event onload pure javascipt
 function img_slideShow() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -42,11 +31,9 @@ function link_color() {
 }
 
 function main() {
-  console.log("Main function started.");
   img_slideShow();
   link_color();
 }
 
-// let's get this party started
 main();
 

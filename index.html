@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- This title is used for tabs and bookmarks -->
 	<title>Bruce Bai</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
@@ -9,19 +8,14 @@
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Include a sitewide CSS file for consistent styling across the site -->
-	<link rel="stylesheet" type="text/css" href="css/site.css">
-	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
-	<!-- Link to javascript file -->
 	<script src="js/site.js" defer></script>
-
-	<!-- <script type="text/javascript" src="./js/lab.js" DEFER></script> -->
 </head>
 <body>
+	<!-- Code for navbar -->
 	<div id="navbar">
 		<div id="empty">
-
+			
 		</div>
 
 		<div id="name">
@@ -37,53 +31,60 @@
 			<a class="social_link" href="https://www.facebook.com/bruce.bai.9212" target="_blank"><img src="./img/fb-logo.png"></a>
 		</div>
 	</div>
-	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+
 	<main id="content">
 		<section>
-			<h2>Bruce's Activities</h2>
 			<div class="minor-section">
-				<video id="myVideo" loop muted autoplay>
-					<source src="./video/pendulum.mp4" type="video/mp4">
-				</video>
-				<!-- From W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto -->
-				<div class="slideshow-container">
-					<div class="mySlides fade">
-						<figure>
-							<img src="./img/northern_lights.jpg">
-							<figcaption>Northern Lights in Iceland!</figcaption>
-						</figure>
+				<!-- Slideshow For Intro Pictures-->
+				<div class="intro-pictures">
+					<video id="myVideo" loop muted autoplay>
+						<source src="./video/pendulum.mp4" type="video/mp4">
+					</video>
+
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<figure>
+								<img src="./img/northern_lights.jpg">
+								<figcaption>Northern Lights in Iceland</figcaption>
+							</figure>
+						</div>
+
+						<div class="mySlides fade">
+							<figure>
+								<img src="./img/open_mic.jpg">
+								<figcaption>Open Mic Night in DownTown Santa Cruz</figcaption>
+							</figure>
+						</div>
+
+						<div class="mySlides fade">
+							<figure>
+								<img src="./img/sunset_pool.jpg">
+								<figcaption>Sunset Infinity Pool in Singapore</figcaption>
+							</figure>
+						</div>
+
+						<div class="mySlides fade">
+							<figure>
+								<img src="./img/blue_lagoon.jpg">
+								<figcaption>Enjoying the Blue Lagoon</figcaption>
+							</figure>
+						</div>
 					</div>
 
-					<div class="mySlides fade">
-						<figure>
-							<img src="./img/open_mic.jpg">
-							<figcaption>Open Mic Night in DownTown Santa Cruz</figcaption>
-						</figure>
+					<div style="text-align:center">
+						<span class="dot"></span> 
+						<span class="dot"></span> 
+						<span class="dot"></span>
+						<span class="dot"></span>
 					</div>
-
-					<div class="mySlides fade">
-						<figure>
-							<img src="./img/sunset_pool.jpg">
-							<figcaption>Sunset Infinity Pool in Singapore</figcaption>
-						</figure>
-					</div>
-
-					<div class="mySlides fade">
-						<figure>
-							<img src="./img/blue_lagoon.jpg">
-							<figcaption>Enjoying the Blue Lagoon</figcaption>
-						</figure>
-					</div>
-
 				</div>
 
-				<div style="text-align:center">
-					<span class="dot"></span> 
-					<span class="dot"></span> 
-					<span class="dot"></span>
-					<span class="dot"></span>
+				<!-- If want to add redirectory, add here! -->
+				<div class="redirectory">
+					<a href="./Clown-Game/index.html" target="_blank">Ex Link 1</a><br>
+					<a href="https://www.youtube.com/watch?v=2sap-GTtCiU" target="_blank">Ex Link 2</a><br>
+					<a href="https://www.youtube.com/watch?v=MPX3qz1ve7M" target="_blank">Ex Link 3</a><br>
 				</div>
-					<!-- W3School Code Ends Here -->
 			</div>
 
 			<br>
