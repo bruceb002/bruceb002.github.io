@@ -35,16 +35,16 @@ h2 {
 
 /* Control link colors when clicked + when sitee reloaded*/
 a {
-	color: rgb(89, 189, 255);
+	color: rgb(53, 120, 255);
 	transition: color 0.2s ease-in-out;
 }
   
 a:hover {
-	color: rgb(228, 174, 255);
+	color: rgb(210, 119, 255);
 }
 
 a.clicked {
-	color: rgb(152, 73, 255);
+	color: rgb(94, 0, 216);
 }
 
 /* navbar */
