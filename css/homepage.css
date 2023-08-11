@@ -38,16 +38,16 @@ h2 {
 
 /* Control link colors when clicked + when sitee reloaded*/
 a {
-	color: rgb(0, 70, 211);
+	color: rgb(255, 207, 74);
 	transition: color 0.2s ease-in-out;
 }
   
 a:hover {
-	color: rgb(255, 91, 105);
+	color: rgb(155, 225, 255);
 }
 
 a.clicked {
-	color: rgb(94, 0, 216);
+	color: rgb(0, 0, 0);
 }
 
 /* navbar */
@@ -95,7 +95,7 @@ a.clicked {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 45vw 45vw;
-	height: 30%;
+	grid-template-rows: 65vh;
 }
 
 /* intro pictures slideshow */
@@ -174,18 +174,29 @@ figcaption {
 /* redirectory */
 .redirectory {
 	margin-left: 20px;
-	padding: 30px;
+	padding: 15px;
 	background-color: rgb(141, 209, 255);
 	border-radius: 2%;
 }
 
-.redirectory a {
-	display: inline-block;
-	margin: 5px;
+.links-container {
+	margin: 5%;
+	display: grid;
+	grid-template-rows: 10vh 10vh 10vh;
+}
+
+.redirectory a, .redirectory img {
+	height: 100%;
+}
+
+.redirectory h3 {
+	position: absolute;
+	display: flex;
+	align-content: center;
+	left: 59%;
 }
 
 .subsection {
-	background-color: rgb(141, 209, 255);
 	display: block;
 	margin: auto;
 	width: 100%;
@@ -194,7 +205,12 @@ figcaption {
 }
 
 .subsection#intro {
+	background-color: rgb(141, 209, 255);
 	color: rgb(0, 0, 0);
+}
+
+.subsection#music_links {
+	background-color: rgb(0, 45, 74);
 }
 
 /* Music Section */
