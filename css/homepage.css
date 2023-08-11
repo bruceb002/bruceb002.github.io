@@ -225,7 +225,6 @@ figcaption {
 	grid-template-columns: 20% 20% 20% 20% 20%;
 	max-width: 80%;
 	margin: auto;
-	padding-top: 20px;
 }
 
 .column {
