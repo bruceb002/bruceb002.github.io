@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	background: url('../img/sunset-background.jpg');
+	background: url('../img/personal_site_bg.jpeg');
 	background-position:center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -36,7 +36,7 @@ h2 {
 	color: #f3f7ff;
 }
 
-/* Control link colors when clicked + when sitee reloaded*/
+/* Control link colors when clicked + when site reloaded*/
 a {
 	color: rgb(255, 207, 74);
 	transition: color 0.2s ease-in-out;
@@ -182,6 +182,7 @@ figcaption {
 	margin: 5%;
 	display: grid;
 	grid-template-rows: 10vh 10vh 10vh;
+	grid-row-gap: 50px;
 }
 
 .redirectory a, .redirectory img {
