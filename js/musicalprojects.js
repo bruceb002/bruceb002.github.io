@@ -9,15 +9,8 @@ function main() {
     url: endpoint,
     method: 'GET',
     success: function(response) {
-      const html = response.html;
-
       tiktok_container = document.getElementById("tiktok-vids");
-      const frame = document.createElement('iframe');
-      frame.src = html;
-      frame.style.width = "420px";
-      frame.style.height = "345px";
-      console.log(frame);
-      tiktok_container.appendChild(frame);
+      tiktok_container.innerHTML = response.html;
     },
     error: function(xhr, status, error) {
       if (xhr.status === 404) {
