@@ -1,7 +1,6 @@
 
 function embedTiktok(url) {
   endpoint = "https://www.tiktok.com/oembed?url=" + url + "&format=json";
-  console.log(endpoint);
   html = "";
   $.ajax({
     url: endpoint,
@@ -20,13 +19,22 @@ function embedTiktok(url) {
   });
 }
 
-function main() {
+function handleURL() {
   url_const = "https://www.tiktok.com/@bruceonaroll/video/"
   vid_ids = ["6836651364823747846", "7274143716271525163", "7076686061526633770", "7169455955623759150", "7172780301771427118", "7273366148148759854", "7318567774907944235"];
   for (let i = 0; i < vid_ids.length; i++) {
     full_url = url_const + vid_ids[i];
     embedTiktok(full_url);
   }
+}
+
+function main() {
+  if (window.TikTok) {
+    handleURL();
+  } else {
+    window.onload = handleURL;
+  }
+  
   
   
 }
