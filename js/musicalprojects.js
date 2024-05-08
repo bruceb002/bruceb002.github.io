@@ -9,13 +9,13 @@ function main() {
     url: endpoint,
     method: 'GET',
     success: function(response) {
-      html = response.html;
+      const html = response.html;
 
       tiktok_container = document.getElementById("tiktok-vids");
       const frame = document.createElement('iframe');
-      frame.style.width= 420;
-      frame.style.height = 345;
       frame.src = html;
+      frame.style.width = "420px";
+      frame.style.height = "345px";
       tiktok_container.appendChild(frame);
     },
     error: function(xhr, status, error) {
