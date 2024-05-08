@@ -16,6 +16,7 @@ function main() {
       frame.src = html;
       frame.style.width = "420px";
       frame.style.height = "345px";
+      console.log(frame);
       tiktok_container.appendChild(frame);
     },
     error: function(xhr, status, error) {
