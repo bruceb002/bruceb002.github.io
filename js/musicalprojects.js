@@ -1,7 +1,8 @@
 
 function embedTiktok(url) {
-  endpoint = "https://www.tiktok.com/oembed?url=" + url + "&format=json"
-  html = ""
+  endpoint = "https://www.tiktok.com/oembed?url=" + url + "&format=json";
+  console.log(endpoint);
+  html = "";
   $.ajax({
     url: endpoint,
     method: 'GET',
