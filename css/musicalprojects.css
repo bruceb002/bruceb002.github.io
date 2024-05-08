@@ -39,3 +39,7 @@ body {
 .item{
     scroll-snap-align: center;
 }
+
+h3 {
+	margin-top: 5%;
+}
