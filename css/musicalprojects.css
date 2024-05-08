@@ -43,3 +43,8 @@ body {
 h3 {
 	margin-top: 5%;
 }
+
+#tiktok-vids iframe {
+	padding: 0;
+	margin: 0;
+  }
