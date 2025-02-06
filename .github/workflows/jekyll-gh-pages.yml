@@ -36,7 +36,7 @@ jobs:
           source: ./
           destination: ./_site
       - name: Upload artifact
-        uses: aactions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v2
 
   # Deployment job
   deploy:
