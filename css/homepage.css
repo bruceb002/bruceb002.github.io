@@ -75,6 +75,9 @@ a.clicked {
 
 #socials img {
 	max-width: 5vh;
+	border-style: solid;
+	border-color: black;
+	border-radius: 100%;
 }
 
 .social_link {
