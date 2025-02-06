@@ -41,11 +41,6 @@ body {
 	text-align: center;
 }
 
-iframe {
-    scroll-snap-align: center;
-	margin: 20px;
-}
-
 h3 {
 	margin-top: 3%;
 }
@@ -59,7 +54,7 @@ h3 {
 	text-align: center;
 }
 
-section {
-	margin: 20px;
+iframe {
+	margin: 10px;
 }
 
