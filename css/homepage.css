@@ -11,28 +11,27 @@ body {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-	.text {font-size: 11px}
+	.text {font-size: 0.3rem}
 }
 
 hr {
-	margin-top: -8px;
-	margin-bottom: 15px;
+	margin-top: -1vh;
+	margin-bottom: 2vh;
 }
 
 /* Font size types */
 h1 {
-	text-shadow: 2px 2px gold;
+	text-shadow: 0.1em 0.1em rgb(238, 172, 16);
 	color: rgb(255, 255, 255);
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 5vh;
+	font-size: clamp(2rem, 5vw, 5vh);
 	margin: auto;
 }
 
 h2 {
 	text-align: center;
-	margin-top: 0;
-	margin-bottom: 2vh;
-	font-size: 1.7vw;
+	margin: 0 0 2vh 0;
+	font-size: clamp(1.5rem, 2.5vw, 3vh);
 	font-family: cursive;
 	color: #f3f7ff;
 }
@@ -55,11 +54,11 @@ a.clicked {
 #navbar {
 	width: 100vw;
 	display: grid;
-  	grid-template-columns: 33vw 33vw 33vw;
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 8vh;
 	background-color: #fcd28d;
-	border: ridge 3px rgb(255, 216, 98);
-	border-radius: 20px;
+	border: ridge 0.2em rgb(255, 216, 98);
+	border-radius: 0 0 1vw 1vw;
 	align-items: center;
 }
 
@@ -74,16 +73,16 @@ a.clicked {
 	justify-content: center;
 	align-content: center;
 	margin-left: 5vw;
-	gap: 0.7em;
+	gap: 0.85vw;
 }
 
 .social_link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5vh; /* Match image size */
-    height: 5vh; /* Match image size */
-    border: 2px solid black; /* Circular border */
+    width: 2.5vw;
+	height: 2.5vw;
+    border: 0.1em solid black; /* Circular border */
     border-radius: 50%;
     overflow: hidden; /* Ensures no extra space */
 }
@@ -97,10 +96,10 @@ a.clicked {
 
 /* Main part */
 #content {
-	margin: 20px;
-	padding: 20px;
+	margin: 2vh;
+	padding: 2vh;
 	background: url("../img/tropical-gradient.jpeg");
-	background-position:center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -119,14 +118,18 @@ a.clicked {
     align-items: center; /* Centers title and container */
 	justify-content: flex-start;
     width: 50%;
+	max-height: 100%;
+	height: inherit;
 }
 
 /* intro pictures slideshow */
 .intro-pictures {
 	position: relative;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
 	text-align: center;
-	margin-right: 20px;
+	margin-right: 2vw;
 	background-color: #ebc7c7;
 	border-radius: 2%;
 	border-style: solid;
@@ -141,14 +144,15 @@ a.clicked {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border: 2px rgb(0, 0, 0) solid;
+	border: 0.2em rgb(0, 0, 0) solid;
 }
 
 .slideshow-container {
 	display: flex;
   	justify-content: center;
-	width: auto;
-	height: auto;
+	width: 46vw; /* Set a consistent width */
+	height: 58vh; /* Set fixed height */
+	min-height: 58vh; /* Ensures it doesn't shrink */
 	margin: auto;
 }
 
@@ -158,10 +162,9 @@ a.clicked {
 
 .dot {
 	position: relative;
-	width: 1%;
+	width: 0.6vw;
 	aspect-ratio: 1/1;
-	margin: 5px;
-	bottom: 10px;
+	margin: 0.5vw;
 	background-color: rgb(235, 254, 255);
 	border-radius: 50%;
 	display: inline-block;
@@ -185,13 +188,13 @@ a.clicked {
 
 img {
 	object-fit: contain;
-	height: 350px;
-	max-height: 100%;
+	max-width: 100%;
+	max-height: 50vh;
 }
 
 figcaption {
 	color: #000000;
-	font-size: 15px;
+	font-size: 1rem;
 	width: 100%;
 	text-align: center;
 }
@@ -223,7 +226,6 @@ figcaption {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	align-content: center;
 	justify-content: center;
 	height: 100%;
 }
@@ -280,16 +282,25 @@ figcaption {
 /* Icons */
 .rounded {
 	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-columns: repeat(auto-fit, minmax(clamp(60px, 10vw, 120px), 1fr));
+	justify-content: center;
 	max-width: 80%;
 	margin: auto;
+	gap: 2vw;
 }
 
 .column {
-	width: 50%;
+	width: clamp(50px, 8vw, 100px);
 	aspect-ratio: 1/1;
 	overflow: hidden;
 	border-radius: 50%;
 	margin: auto;
 	cursor: pointer;
+}
+
+.column img {
+	width: 100%; 
+	height: 100%; 
+	object-fit: cover;
+	border-radius: 50%;
 }
