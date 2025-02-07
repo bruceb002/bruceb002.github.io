@@ -58,6 +58,7 @@ a.clicked {
 	background-color: #fcd28d;
 	border: ridge 3px rgb(255, 216, 98);
 	border-radius: 20px;
+	align-items: center;
 }
 
 #name {
@@ -71,19 +72,26 @@ a.clicked {
 	justify-content: center;
 	align-content: center;
 	margin-left: 5vw;
-}
-
-#socials img {
-	max-width: 5vh;
-	border-style: solid;
-	border-color: black;
-	border-radius: 100%;
+	gap: 0.7em;
 }
 
 .social_link {
-	margin-left: 5px;
-	margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vh; /* Match image size */
+    height: 5vh; /* Match image size */
+    border: 2px solid black; /* Circular border */
+    border-radius: 50%;
+    overflow: hidden; /* Ensures no extra space */
 }
+  
+#socials img {
+    width: 100%; /* Fill the container */
+    height: 100%;
+    border-radius: 50%;
+}
+
 
 /* Main part */
 #content {
