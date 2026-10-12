@@ -1,60 +1,119 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
-	margin: 0;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	background-color: hwb(218 52% 0%);
-	background-attachment: fixed;
-	text-align: center;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #7ba0e4 0%, #a2c4fc 100%);
+    background-attachment: fixed;
+    color: #1e293b;
+    min-height: 100vh;
+    padding-bottom: 3rem;
 }
 
+/* Modern Header / Navbar */
 #navbar {
-	width: 100vw;
-	background: url('../img/starry_sky.jpg');
-	background-position:center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: ridge 3px rgb(255, 216, 98);
-	text-align: center;
-	text-shadow: 2px 2px #e6b72c;
-	color: rgb(255, 255, 255);
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #ffffff;
+    padding: 1.2rem 0;
+    margin-bottom: 2.5rem;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.item-list::-webkit-scrollbar {
-	display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-.item-list{
-	display: flex;
-	scroll-behavior: smooth;
-	overflow: auto;
-    scroll-snap-type: x mandatory;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-	background-color: white;
-	width: 98%;
-	border-radius: 10px 100px / 120px;
-	margin: auto;
-	text-align: center;
+#navbar h1, #navbar div {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin: 0;
 }
 
-h3 {
-	margin-top: 3%;
+/* Section Headings */
+h2, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 2rem auto 1rem auto;
+    text-align: center;
 }
 
+/* TikTok Section Container Sizing */
 #tiktok-vids {
-	background-color: white;
-	border-radius: 10px 100px / 120px;
-	width: 98%;
-	display: flex;
-	margin: auto;
-	text-align: center;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    
+    /* Constrain container height to match YouTube section proportions */
+    max-height: 520px;
+    align-items: center; /* Centers the embeds vertically inside the card */
+    padding: 1.25rem;
 }
 
+/* Constrain TikTok Embeds/iframes specifically */
+#tiktok-vids iframe,
+#tiktok-vids .tiktok-embed {
+    width: 325px !important;
+    height: 460px !important;
+    max-height: 460px !important;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+/* Horizontal Video Scroll Container */
+.item-list, #tiktok-vids {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* Hide scrollbar IE/Edge */
+    scrollbar-width: none;  /* Hide scrollbar Firefox */
+    
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto 2.5rem auto;
+    padding: 1.5rem;
+}
+
+/* Hide scrollbar Chrome/Safari/Opera */
+.item-list::-webkit-scrollbar,
+#tiktok-vids::-webkit-scrollbar {
+    display: none;
+}
+
+/* Video Card Items */
+.item-list > *, #tiktok-vids > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* Clean Embed Framing */
 iframe {
-	margin: 10px;
+    margin: 0;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+iframe:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
