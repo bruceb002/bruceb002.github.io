@@ -121,31 +121,50 @@ a.clicked {
     max-width: 1400px;
 }
 
+/* Top Hero Grid: About Me + Images Carousel Side-by-Side */
 .top-container {
     display: flex;
     justify-content: center;
     margin: auto;
     width: 100%;
-    align-items: stretch;
+    align-items: flex-start; /* THIS FIXES THE STRETCHING */
     gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .top-container {
+        flex-direction: column;
+    }
+    .minor-section {
+        width: 100% !important;
+    }
 }
 
 .minor-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: stretch; /* Makes inner card fill height */
     width: 50%;
 }
 
-/* Glassmorphism Cards (Slideshow & Endeavors) */
-.intro-pictures, .redirectory {
+.left-hero .subsection {
+    margin: 0;
+    height: 100%;
+}
+
+.right-hero {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Glassmorphism Cards */
+.intro-pictures, .redirectory, .subsection {
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
 }
 
 .intro-pictures {
@@ -155,18 +174,10 @@ a.clicked {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     width: 100%;
-}
-
-#myVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 18px;
+    height: auto; /* Changed from 100% so it doesn't force height */
+    box-sizing: border-box;
 }
 
 .slideshow-container {
@@ -175,8 +186,34 @@ a.clicked {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 55vh;
-    margin: auto;
+    margin: auto 0; /* Centers it vertically within the available space */
+}
+
+/* Glass card for About Me text */
+.about-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+
+.about-card p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.about-card ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+.about-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 .mySlides {
@@ -231,10 +268,13 @@ figcaption {
     margin-top: 0.75rem;
 }
 
-/* Redirectory / Endeavors Box */
+/* Endeavors Section */
+.endeavors-section {
+    margin: 2rem 0;
+}
+
 .redirectory {
     width: 100%;
-    min-height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,21 +282,32 @@ figcaption {
     padding: 1.5rem;
 }
 
-/* FIX: Clean 2-column grid for Endeavors links (No text overlap) */
+/* 3-column Grid for Endeavors links */
 .links-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
     width: 100%;
     padding: 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .links-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .links-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .links-column {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.25rem;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 12px;
@@ -270,30 +321,21 @@ figcaption {
 }
 
 .links-column a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #1e293b;
     text-align: center;
-    white-space: normal;
     text-decoration: none;
-    z-index: 2;
 }
 
-.links-column img {
-    display: none; /* Removed background brush assets that caused overlapping text */
+.links-column h3 {
+    margin: 0;
 }
 
-/* Subsections (e.g. Intro / About Me) */
+/* Subsections (Intro / About Me) */
 .subsection {
     display: block;
-    margin: 2rem auto;
-    width: 100%;
     padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .subsection p {
@@ -303,6 +345,7 @@ figcaption {
 
 .subsection ul {
     margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
     padding-left: 1.25rem;
 }
 
@@ -346,4 +389,27 @@ figcaption {
     height: 100%; 
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* Compact Endeavors Container */
+.compact-redirectory {
+    width: 100%;
+    padding: 1.25rem;
+}
+
+/* 2-Column Compact Grid for the Right Column Stack */
+.compact-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns side-by-side in the right panel */
+    gap: 0.75rem !important;
+    width: 100%;
+}
+
+.compact-links .links-column {
+    padding: 0.85rem 0.5rem;
+    border-radius: 10px;
+}
+
+.compact-links .links-column a {
+    font-size: 0.95rem; /* Slightly smaller text to fit neatly */
 }

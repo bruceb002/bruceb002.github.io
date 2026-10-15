@@ -1,208 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bruce Bai</title>
+    <title>Bruce Bai</title>
 
-	<!-- Use UTF character set, a good idea with any webpage -->
-	<meta charset="UTF-8" />
-	<!-- Set viewport so page remains consistently scaled w narrow devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use UTF character set -->
+    <meta charset="UTF-8" />
+    <!-- Set viewport so page remains consistently scaled on narrow devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="css/homepage.css">
-	<script src="js/site.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
-	<!-- Code for navbar -->
-	<div id="navbar">
-		<div id="empty">
-			
-		</div>
+    <!-- Navbar -->
+    <div id="navbar">
+        <div id="empty"></div>
 
-		<div id="name">
-			<h1>Bruce Bai</h1>
-		</div>
-		
-		<div id="socials">
-			<a class="social_link" href="https://www.instagram.com/bruceonaroll/" target="_blank"><img src="./img/insta-logo.png"></a>
-			<a class="social_link" href="https://www.youtube.com/channel/UC2aPZuAG1XwXGgcGPfEfsEA" target="_blank"><img src="./img/youtube-logo.png"></a> 
-			<a class="social_link" href="https://www.facebook.com/bruce.bai.9212" target="_blank"><img src="./img/fb-logo.png"></a>
-			<a class="social_link" href="https://www.tiktok.com/@bruceonaroll?is_from_webapp=1&sender_device=pc" target="_blank"><img src="./img/tiktok-logo.png"></a>
-			<a class="social_link" href="https://www.linkedin.com/in/bruce-bai/" target="_blank"><img src="./img/linkedin-logo.png"></a>  
-			<a class="social_link" href="https://github.com/bruceb002" target="_blank"><img src="./img/github-logo.svg.png"></a> 
-		</div>
-	</div>
+        <div id="name">
+            <h1>Bruce Bai</h1>
+        </div>
+        
+        <div id="socials">
+            <a class="social_link" href="https://www.instagram.com/bruceonaroll/" target="_blank"><img src="./img/insta-logo.png" alt="Instagram"></a>
+            <a class="social_link" href="https://www.youtube.com/channel/UC2aPZuAG1XwXGgcGPfEfsEA" target="_blank"><img src="./img/youtube-logo.png" alt="YouTube"></a> 
+            <a class="social_link" href="https://www.facebook.com/bruce.bai.9212" target="_blank"><img src="./img/fb-logo.png" alt="Facebook"></a>
+            <a class="social_link" href="https://www.tiktok.com/@bruceonaroll?is_from_webapp=1&sender_device=pc" target="_blank"><img src="./img/tiktok-logo.png" alt="TikTok"></a>
+            <a class="social_link" href="https://www.linkedin.com/in/bruce-bai/" target="_blank"><img src="./img/linkedin-logo.png" alt="LinkedIn"></a>  
+            <a class="social_link" href="https://github.com/bruceb002" target="_blank"><img src="./img/github-logo.svg.png" alt="GitHub"></a> 
+        </div>
+    </div>
 
-	<main id="content">
-		<section>
-			<div class="top-container">
-				<div class="minor-section">
-					<h2>Images</h2>
-					<!-- Slideshow For Intro Pictures-->
-					<div class="intro-pictures">
-						<div class="slideshow-container">
-							<div class="mySlides fade">
-								<figure>
-									<img src="./img/northern_lights.jpg">
-									<figcaption>Northern Lights in Iceland</figcaption>
-								</figure>
-							</div>
+    <main id="content">
+        <section>
+            <!-- TOP HERO CONTAINER: About Me (Left) + Images & Endeavors Stack (Right) -->
+            <div class="top-container">
+                <!-- Left Column: About Me Card -->
+                <div class="minor-section">
+                    <h2>About Me</h2>
+                    <div class="about-card">
+                        <p>Hi, I'm Bruce Bai! I'm an aspiring software engineer currently completing my Master’s degree in Computer Science and Data Science at the University of Southern California (USC), following my undergraduate studies at UC Santa Cruz.</p>
+                        
+                        <p>Over the years, I've had the opportunity to build a robust professional foundation through four software engineering internships—spanning companies like Medtronic, Best Egg, and Marlette Funding LLC. My engineering work ranges from full-stack enterprise web development and migrating legacy systems to optimizing database queries and building C++ Proof of Concepts that dramatically cut load times.</p>
 
-							<div class="mySlides fade">
-								<figure>
-									<img src="./img/open_mic.jpg">
-									<figcaption>Open Mic Night in DownTown Santa Cruz</figcaption>
-								</figure>
-							</div>
+                        <h3>Beyond The Code</h3>
+                        <p>You’ve gotten a glimpse of the technical side, but I’m no robot! Here is a bit about who I am when I'm away from the IDE:</p>
+                        <ul>
+                            <li><strong>Music &amp; Acapella:</strong> I’m an active tenor singer in a university acapella group, and separately, I love arranging complex music mashups (especially involving Taylor Swift) and using tools like MuseScore to bring vocal harmony charts to life.</li>
+                            <li><strong>Vocal Range &amp; Pop Stanning:</strong> I am a massive fan of Mariah Carey and Taylor Swift. True to form, I’ve spent years training to hit those high belts and whistles, as well as learning respective choreography by Taylor.</li>
+                            <li><strong>Creative Energy:</strong> Outside of classes and coding sprints, you'll usually find me deep into music production, arranging, or exploring creative visual design.</li>
+                        </ul>
+                        <p>Great, now you know who I am! I hope you enjoyed my introduction, and feel free to explore more of my website!</p>
+                    </div>
+                </div>
 
-							<div class="mySlides fade">
-								<figure>
-									<img src="./img/sunset_pool.jpg">
-									<figcaption>Sunset Infinity Pool in Singapore</figcaption>
-								</figure>
-							</div>
+                <!-- Right Column Stack: Images Carousel + Endeavors Grid -->
+                <div class="minor-section right-stack">
+                    <h2>Images</h2>
+                    <div class="intro-pictures">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <figure>
+                                    <img src="./img/northern_lights.jpg" alt="Northern Lights">
+                                    <figcaption>Northern Lights in Iceland</figcaption>
+                                </figure>
+                            </div>
 
-							<div class="mySlides fade">
-								<figure>
-									<img src="./img/blue_lagoon.jpg">
-									<figcaption>Enjoying the Blue Lagoon</figcaption>
-								</figure>
-							</div>
-						</div>
+                            <div class="mySlides fade">
+                                <figure>
+                                    <img src="./img/open_mic.jpg" alt="Open Mic">
+                                    <figcaption>Open Mic Night in DownTown Santa Cruz</figcaption>
+                                </figure>
+                            </div>
 
-						<div style="text-align:center">
-							<span class="dot"></span> 
-							<span class="dot"></span> 
-							<span class="dot"></span>
-							<span class="dot"></span>
-						</div>
-					</div>
-				</div>
+                            <div class="mySlides fade">
+                                <figure>
+                                    <img src="./img/sunset_pool.jpg" alt="Sunset Pool">
+                                    <figcaption>Sunset Infinity Pool in Singapore</figcaption>
+                                </figure>
+                            </div>
 
-				<div class="minor-section">
-					<h2>Endeavors</h2>
-					<!-- If want to add redirectory, add here! -->
-					<div class="redirectory">
-						<div class="links-container">
-							<div class="links-column">
-								<a href="https://ride-share-psi.vercel.app/">
-									<h3>Vue</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
+                            <div class="mySlides fade">
+                                <figure>
+                                    <img src="./img/blue_lagoon.jpg" alt="Blue Lagoon">
+                                    <figcaption>Enjoying the Blue Lagoon</figcaption>
+                                </figure>
+                            </div>
+                        </div>
 
-							<div class="links-column">
-								<a href="./sites/Blackboard/index.html">
-									<h3>Blackboard</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
-							
-							<div class="links-column">
-								<a href="https://bruce-bai.com/art101_clown_proj/">
-									<h3>Dress Up Game</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
+                        <div style="text-align:center">
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
 
-							<div class="links-column">
-								<a href="./sites/MusicalProjects/index.html">
-									<h3>Music Projects</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
+                    <h2 style="margin-top: 2rem;">Endeavors</h2>
+                    <div class="redirectory compact-redirectory">
+                        <div class="links-container compact-links">
+                            <div class="links-column">
+                                <a href="https://ride-share-psi.vercel.app/"><h3>Vue</h3></a>
+                            </div>
+                            <div class="links-column">
+                                <a href="./sites/Blackboard/index.html"><h3>Blackboard</h3></a>
+                            </div>
+                            <div class="links-column">
+                                <a href="https://bruce-bai.com/art101_clown_proj/"><h3>Dress Up Game</h3></a>
+                            </div>
+                            <div class="links-column">
+                                <a href="./sites/MusicalProjects/index.html"><h3>Music Projects</h3></a>
+                            </div>
+                            <div class="links-column">
+                                <a href="./sites/Drawings/index.html"><h3>Drawings</h3></a>
+                            </div>
+                            <div class="links-column">
+                                <a href="./sites/Travel/index.html"><h3>Travels</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-							<div class="links-column">
-								<a href="./sites/Drawings/index.html">
-									<h3>Drawings</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
+            <hr>
 
-							<div class="links-column">
-								<a href="./sites/Travel/index.html">
-									<h3>Travels</h3>
-								</a>
-								<img src="./img/rainbow-streak.png">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+            <!-- BOTTOM SECTION: Favorite Musicians -->
+            <h2>Favorite Musicians</h2>
 
-			<br>
-			<br>
-			
-			<div>
-				<hr>
-
-				<h2>About Me</h2>
-
-				<div class="subsection" id="intro">
-					<p>Hi, I'm Bruce Bai! I'm an aspiring software engineer currently completing my Master’s degree in Computer Science and Data Science 
-						at the University of Southern California (USC), following my undergraduate studies at UC Santa Cruz.
-					</p>
-					<p>
-						Over the years, I've had the opportunity to build a robust professional foundation through 
-						four software engineering internships—spanning companies like Medtronic, Best Egg, and Marlette Funding LLC. 
-						My engineering work ranges from full-stack enterprise web development and migrating legacy systems to optimizing database queries 
-						and building C++ Proof of Concepts that dramatically cut load times. Whether I'm architecting responsive web interfaces or 
-						streamlining backend data pipelines, I love tackling complex, high-impact technical challenges.
-					</p>
-
-					<h3>Beyond The Code</h3>
-					<p className="mb-2">
-						You’ve gotten a glimpse of the technical side, but I’m no robot! Here is a bit about who I am when I'm away from the IDE:
-					</p>
-					<ul className="mt-1 space-y-2">
-						<li>
-							<strong>Music & Acapella:</strong> I’m an active tenor singer in a university acapella group, and seperately, 
-							I love arranging complex music mashups (especially involving Taylor Swift) and using tools like MuseScore to 
-							bring vocal harmony charts to life.
-						</li>
-						<li>
-							<strong>Vocal Range & Pop Stanning:</strong> I am a massive fan of Mariah Carey and Taylor Swift. True to form, I’ve spent years training to 
-							hit those high belts and whistles, as well as learn respective choreography by Taylor.
-						</li>
-						<li>
-							<strong>Creative Energy:</strong> Outside of classes and coding sprints, you'll usually find me deep into music production, arranging, or 
-							exploring creative visual design.
-						</li>
-					</ul>
-					<p>Great, now you know who I am! I hope you enjoyed my introduction, and feel free to explore more of my website!</p>
-				</div>
-
-				<br>
-
-				<hr>
-
-				<h2>Favorite Musicians</h2>
-
-				<div class="subsection" id="music_links">
-					<div class="rounded">
-						<div class="column">
-							<a href="https://mariahcarey.com/" target="_blank"><img src="./img/mariah_icon.jpg" alt="Mariah Carey"></a>
-						</div>
-
-						<div class="column">
-							<a href="https://www.torikellymusic.com/" target="_blank"><img src="./img/tori_icon.jpeg" alt="Tori Kelly"></a> 
-						</div>
-		
-						<div class="column">
-							<a href="https://www.christinaaguilera.com/" target="_blank"><img src="./img/christina_icon.jpg" alt="Christina Aguilera"></a> 
-						</div>
-		
-						<div class="column">
-							<a href="https://www.taylorswift.com/" target="_blank"><img src="./img/taylor_icon.jpeg" alt="Taylor Swift"></a> 
-						</div>
-		
-						<div class="column">
-							<a href="https://www.kellyclarksonmerch.com/" target="_blank"><img src="./img/kelly_icon.jpg" alt="Kelly Clarkson"></a> 
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section>
-	</main>
+            <div class="subsection" id="music_links">
+                <div class="rounded">
+                    <div class="column"><a href="https://mariahcarey.com/" target="_blank"><img src="./img/mariah_icon.jpg" alt="Mariah Carey"></a></div>
+                    <div class="column"><a href="https://www.torikellymusic.com/" target="_blank"><img src="./img/tori_icon.jpeg" alt="Tori Kelly"></a></div>
+                    <div class="column"><a href="https://www.christinaaguilera.com/" target="_blank"><img src="./img/christina_icon.jpg" alt="Christina Aguilera"></a></div>
+                    <div class="column"><a href="https://www.taylorswift.com/" target="_blank"><img src="./img/taylor_icon.jpeg" alt="Taylor Swift"></a></div>
+                    <div class="column"><a href="https://www.kellyclarksonmerch.com/" target="_blank"><img src="./img/kelly_icon.jpg" alt="Kelly Clarkson"></a></div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
